@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      //list data dari prodak
       name: "Nike Slim Shirt",
       slug: "nike-slim-shirt1",
       category: "Shierts",
