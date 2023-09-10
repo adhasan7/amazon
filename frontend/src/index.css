@@ -21,7 +21,7 @@ main {
 }
 .product img {
   width: 100%;
-  max-width: 200px;
+  max-width: 150px;
 }
 .product-info {
   padding: 1rem;
