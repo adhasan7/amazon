@@ -29,3 +29,8 @@ video 57list product
 1. create route for /api/products
 1. return products
 1. run npm start
+
+=>. Add bootstrap UI framework
+
+1. npm install react react-bootstrap bootstrap
+1. update App.js
