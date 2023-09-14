@@ -34,3 +34,6 @@ video 57list product
 
 1. npm install react react-bootstrap bootstrap
 1. update App.js
+
+=> Create product and ratting component
+1.create rating component 2. create product component 3. use rating component in product component
