@@ -1,67 +1,10 @@
-// //untuk akses ke api server
-// const data = {
-//   products: [
-//     {
-//       name: "Nike Slim Shirt",
-//       slug: "nike-slim-shirt1",
-//       category: "Shierts",
-//       image: "/images/p1.jpg",
-//       price: 120,
-//       CountInStock: 10,
-//       Brand: "Nike",
-//       rating: 4.5,
-//       nameReviews: 10,
-//       description: "Hght quality shirt",
-//     },
-//     {
-//       name: "Nike Slim Shirt",
-//       slug: "nike-slim-shirt2",
-//       category: "Shierts",
-//       image: "/images/p2.jpg",
-//       price: 120,
-//       CountInStock: 10,
-//       Brand: "Nike",
-//       rating: 4.5,
-//       nameReviews: 10,
-//       description: "Hght quality shirt",
-//     },
-//     {
-//       name: "Nike Slim Shirt",
-//       slug: "nike-slim-shirt3",
-//       category: "Shierts",
-//       image: "/images/p3.jpg",
-//       price: 120,
-//       CountInStock: 10,
-//       Brand: "Nike",
-//       rating: 4.5,
-//       nameReviews: 10,
-//       description: "Hght quality shirt",
-//     },
-//     {
-//       name: "Nike Slim Shirt",
-//       slug: "nike-slim-shirt4",
-//       category: "Shierts",
-//       image: "/images/p4.jpg",
-//       price: 120,
-//       CountInStock: 10,
-//       Brand: "Nike",
-//       rating: 4.5,
-//       nameReviews: 10,
-//       description: "Hght quality shirt",
-//     },
-//   ],
-// };
-// export default data;
-
-// yang di atas code ver si sendiri
-
 const data = {
   products: [
     {
       name: "Nike Slim shirt",
       slug: "nike-slim-shirt",
       category: "Shirts",
-      image: "/images/p1.jpg", // 679px × 829px
+      image: "/images/p1.jpg",
       price: 120,
       countInStock: 10,
       brand: "Nike",
@@ -69,6 +12,7 @@ const data = {
       numReviews: 10,
       description: "high quality shirt",
     },
+
     {
       name: "Adidas Fit Shirt",
       slug: "adidas-fit-shirt",
@@ -93,6 +37,7 @@ const data = {
       numReviews: 14,
       description: "high quality product",
     },
+
     {
       name: "Adidas Fit Pant",
       slug: "adidas-fit-pant",

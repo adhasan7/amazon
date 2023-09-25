@@ -37,3 +37,5 @@ video 57list product
 
 => Create product and ratting component
 1.create rating component 2. create product component 3. use rating component in product component
+=>Create product Details Screen
+1.fetch product from backend 2.create 3 columns for image, info and action

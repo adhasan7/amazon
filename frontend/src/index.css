@@ -13,6 +13,7 @@ main {
   flex: 1;
 }
 .btn-primary {
+  color: black;
   background-color: #f0c040;
 }
 .products {
@@ -29,7 +30,7 @@ main {
 }
 .product img {
   width: 100%;
-  max-width: 150px;
+  max-width: 200px;
 }
 .product-info {
   padding: 1rem;
