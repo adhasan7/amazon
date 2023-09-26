@@ -11,7 +11,6 @@ function App() {
     <BrowserRouter>
       <div className='d-flex flex-column site-container'>
         <header>
-          {/* <Link to='/'>Amazon</Link> */}
           <Navbar bg='dark' variant='dark'>
             <Container>
               <LinkContainer to='/'>
@@ -21,7 +20,7 @@ function App() {
           </Navbar>
         </header>
         <main>
-          <Container>
+          <Container className='mt-3'>
             <Routes>
               <Route path='/product/:slug' element={<ProductScreen />} />
               <Route path='/' element={<HomeScreen />} />

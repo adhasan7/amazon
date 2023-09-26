@@ -4,6 +4,7 @@ import logger from "use-reducer-logger";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Product from "../components/Product";
+import { Helmet } from "react-helmet-async";
 // import data from "../data";
 const reducer = (state, action) => {
   switch (action.type) {
@@ -18,14 +19,12 @@ const reducer = (state, action) => {
   }
 };
 function HomeScreen() {
-  console.log("render HomeScreen component");
   const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
     products: [],
     loading: true,
     error: "",
   });
-  // console.log("Komponen HomeScreen dirender"); // Tambahkan pesan log di sini
-  // const [products, setProducts] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
@@ -35,14 +34,15 @@ function HomeScreen() {
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
       }
-
-      // setProducts(result.data);
     };
     fetchData();
   }, []);
 
   return (
     <div>
+      <Helmet>
+        <title>Amazona</title>
+      </Helmet>
       <h1>Jasa Modifikasi Pakaian</h1>
       <div className='products'>
         {loading ? (

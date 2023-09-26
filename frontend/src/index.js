@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App";
 import axios from "axios";
+import { HelmetProvider } from "react-helmet-async";
 
 import reportWebVitals from "./reportWebVitals";
 // Mengatur proxy global
@@ -17,9 +18,9 @@ window.axios.defaults.baseURL = "http://localhost:5000";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <HelmetProvider>
     <App />
-  </React.StrictMode>
+  </HelmetProvider>
 );
 console.log(window.axios, "hasil axios :");
 
