@@ -39,3 +39,9 @@ video 57list product
 1.create rating component 2. create product component 3. use rating component in product component
 =>Create product Details Screen
 1.fetch product from backend 2.create 3 columns for image, info and action
+
+=>13create loading and message component
+1create loading component
+2use spinner component
+3createmessagecomponent
+4createutilsjstodefinegetErrorfunction
