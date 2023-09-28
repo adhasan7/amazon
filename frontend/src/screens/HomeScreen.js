@@ -46,7 +46,6 @@ function HomeScreen() {
         <title>Amazona</title>
       </Helmet>
       <h1>Jasa Modifikasi Pakaian</h1>
-      console.log("ada error", error)
       <div className='products'>
         {loading ? (
           <LoadingBox />

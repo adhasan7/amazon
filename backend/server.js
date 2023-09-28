@@ -4,6 +4,8 @@ const app = express();
 import cors from "cors";
 //test
 
+// 16. Create React Context
+
 app.use(cors());
 app.get("/api/products", (req, res) => {
   res.send(data.products);

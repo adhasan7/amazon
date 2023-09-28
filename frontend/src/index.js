@@ -1,28 +1,22 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App";
-import axios from "axios";
 import { HelmetProvider } from "react-helmet-async";
-
+import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
-// Mengatur proxy global
-window.axios = axios;
+import { StoreProvider } from "./Store";
 
-window.axios.defaults.baseURL = "http://localhost:5000";
-// Ganti dengan port proxy yang sesuai
-//  // auth: {
-//     username: "your-username",
-//     password: "your-password",
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <HelmetProvider>
-    <App />
-  </HelmetProvider>
+ReactDOM.render(
+  <React.StrictMode>
+    <StoreProvider>
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    </StoreProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
-console.log(window.axios, "hasil axios :");
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

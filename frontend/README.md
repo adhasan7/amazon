@@ -45,3 +45,9 @@ video 57list product
 2use spinner component
 3createmessagecomponent
 4createutilsjstodefinegetErrorfunction
+
+=>14implementaddtocart
+1createreactcontext
+2definereducer
+3createstoreprovider
+4implementaddtocartbuttonclick
