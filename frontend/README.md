@@ -51,3 +51,7 @@ video 57list product
 2definereducer
 3createstoreprovider
 4implementaddtocartbuttonclick
+
+=>15complete add to cart
+1.check exist item in the cart
+2.check count in stock in backend

@@ -1,14 +1,13 @@
 import axios from "axios";
 import { useContext, useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
-import logger from "use-reducer-logger";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Badge from "react-bootstrap/Badge";
+import Button from "react-bootstrap/Button";
 import Rating from "../components/Rating";
-import Button from "react-bootstrap/esm/Button";
 import { Helmet } from "react-helmet-async";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
@@ -31,9 +30,8 @@ const reducer = (state, action) => {
 function ProductScreen() {
   const params = useParams();
   const { slug } = params;
-
-  const [{ loading, error, product }, dispatch] = useReducer(logger(reducer), {
-    product: [],
+  const [{ loading, error, product }, dispatch] = useReducer(reducer, {
+    product: {},
     loading: true,
     error: "",
   });
@@ -51,11 +49,19 @@ function ProductScreen() {
     fetchData();
   }, [slug]);
 
-  const { state, dispatch: ctxDispatch } = useContext(Store);
-  const addToCartHandler = () => {
-    ctxDispatch({
+  const { state: cart, dispatch: cartDispatch } = useContext(Store);
+
+  const addToCartHandler = async () => {
+    const existItem = cart.cartItems?.find() || null;
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(`/api/products/${product._id}`);
+    if (data.countInStock < quantity) {
+      window.alert("Sorry. Product is out of stock");
+      return;
+    }
+    cartDispatch({
       type: "CART_ADD_ITEM",
-      payload: { ...product, quantity: 1 },
+      payload: { ...product, quantity },
     });
   };
 
@@ -67,9 +73,12 @@ function ProductScreen() {
     <div>
       <Row>
         <Col md={6}>
-          <img className='img-large' src={product.image} alt={product.name} />
+          <img
+            className='img-large'
+            src={product.image}
+            alt={product.name}
+          ></img>
         </Col>
-
         <Col md={3}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
@@ -84,7 +93,7 @@ function ProductScreen() {
                 numReviews={product.numReviews}
               ></Rating>
             </ListGroup.Item>
-            <ListGroup.Item>Pierce : ${product.price}</ListGroup.Item>
+            <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
             <ListGroup.Item>
               Description:
               <p>{product.description}</p>
@@ -97,7 +106,7 @@ function ProductScreen() {
               <ListGroup variant='flush'>
                 <ListGroup.Item>
                   <Row>
-                    <Col>Pirce:</Col>
+                    <Col>Price:</Col>
                     <Col>${product.price}</Col>
                   </Row>
                 </ListGroup.Item>
@@ -130,4 +139,5 @@ function ProductScreen() {
     </div>
   );
 }
+
 export default ProductScreen;
