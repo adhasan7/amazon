@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import MessageBox from "../components/MessageBox";
 import LoadingBox from "../components/LoadingBox";
 // import data from "../data";
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":
