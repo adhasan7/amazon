@@ -71,6 +71,14 @@ video 57list product
 =>1create sign in from
 add email and password
 add signin button
+
 =>19 connect to MongoDB Database
 1.create atlas mongodb database 2. install local mongoDb database
 3.npm install mongoose 4. connect to mongodb datbase
+
+=>20 Seed Sample Data
+1.create Product model
+2.create user model
+3.create seed route
+4.use route in server.js
+5.seed sample product
