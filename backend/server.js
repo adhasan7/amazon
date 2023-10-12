@@ -1,16 +1,17 @@
 import express from "express";
+import data from "./data.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import data from "./data.js"; // Pastikan berkas data.js ada di lokasi yang benar
-import seedRouter from "./routes/seedRoutes.js"; // Pastikan berkas seedRoutes.js ada di lokasi yang benar
-import productRouter from "./routes/productRoutes.js"; // Pastikan berkas productRoutes.js ada di lokasi yang benar
+import seedRouter from "./routes/seedRoutes.js";
+import productRouter from "./routes/productRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 
 dotenv.config();
 
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
-    console.log("Connected to the database");
+    console.log("connected to db");
   })
   .catch((err) => {
     console.log(err.message);
@@ -18,11 +19,18 @@ mongoose
 
 const app = express();
 
-// Rute-rute Anda di sini
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/api/seed", seedRouter);
 app.use("/api/products", productRouter);
+app.use("/api/users", userRouter);
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`Server berjalan di http://localhost:${port}`);
+  console.log(`serve at http://localhost:${port}`);
 });
