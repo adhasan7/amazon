@@ -78,7 +78,7 @@ add signin button
 
 =>20 Seed Sample Data
 1.create Product model
-2.create user model
+2.create user modelP
 3.create seed route
 4.use route in server.js
 5.seed sample product
@@ -92,3 +92,8 @@ add signin button
 1.  create signin api
 2.  npm install jsonwebtoken
 3.  define generalToken
+
+4.  Complete Signin Screen
+    1.handle submit action
+    2.save token in strore and local storage
+    3.show user name in header
