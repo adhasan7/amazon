@@ -97,3 +97,7 @@ add signin button
     1.handle submit action
     2.save token in strore and local storage
     3.show user name in header
+    24.Create shipping screen
+5.  create form inputs
+6.  handle save shipping address
+7.  add checkout wizard
