@@ -105,3 +105,8 @@ add signin button
     1.create input forms
 9.  handle submit
     3.create backend api
+
+    26.implement Select payment method screen
+
+    1. create input form
+    2. hendle submit
