@@ -1,8 +1,8 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
-import "react-toastify/dist/ReactToastify.css";
 import Navbar from "react-bootstrap/Navbar";
 import Badge from "react-bootstrap/Badge";
 import Nav from "react-bootstrap/Nav";
@@ -14,15 +14,15 @@ import { Store } from "./Store";
 import CartScreen from "./screens/CartScreen";
 import SigninScreen from "./screens/SigninScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
+import SignupScreen from "./screens/SignupScreen";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
-
   const signoutHandler = () => {
-    ctxDispatch({ type: `USER_SIGNOUT` });
+    ctxDispatch({ type: "USER_SIGNOUT" });
     localStorage.removeItem("userInfo");
-    localStorage.renoveItem("shippingAddress");
+    localStorage.removeItem("shippingAddress");
   };
   return (
     <BrowserRouter>
@@ -74,18 +74,21 @@ function App() {
             <Routes>
               <Route path='/product/:slug' element={<ProductScreen />} />
               <Route path='/cart' element={<CartScreen />} />
-              <Route path='/Signin' element={<SigninScreen />} />
-              <Route path='/shipping' element={<ShippingAddressScreen />} />
+              <Route path='/signin' element={<SigninScreen />} />
+              <Route path='/signup' element={<SignupScreen />} />
+              <Route
+                path='/shipping'
+                element={<ShippingAddressScreen />}
+              ></Route>
               <Route path='/' element={<HomeScreen />} />
             </Routes>
           </Container>
         </main>
         <footer>
-          <div className='text-center'>All right reselved</div>
+          <div className='text-center'>All rights reserved</div>
         </footer>
       </div>
     </BrowserRouter>
   );
 }
-
 export default App;

@@ -101,3 +101,7 @@ add signin button
 5.  create form inputs
 6.  handle save shipping address
 7.  add checkout wizard
+8.  create sign up screen
+    1.create input forms
+9.  handle submit
+    3.create backend api
