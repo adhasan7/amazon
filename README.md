@@ -115,3 +115,7 @@ add signin button
     1.show cart items, payment and address
 11. handle place order action
 12. create order create api
+
+13. implement pleace order action
+14. handle place order action
+15. create order create api
