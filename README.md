@@ -110,3 +110,8 @@ add signin button
 
     1. create input form
     2. hendle submit
+
+10. Create place order screen
+    1.show cart items, payment and address
+11. handle place order action
+12. create order create api
