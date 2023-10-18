@@ -119,3 +119,9 @@ add signin button
 13. implement pleace order action
 14. handle place order action
 15. create order create api
+
+16. Create Order Screen 1. create backend api for order/:id 2. fetch order api in frontend 3. show order information in 2 cloumns
+<!-- => Create Order Screen
+==>create backend api for order/:id
+==>fetch order api in frontend
+==>show order information in 2 cloumns -->
