@@ -121,7 +121,21 @@ add signin button
 15. create order create api
 
 16. Create Order Screen 1. create backend api for order/:id 2. fetch order api in frontend 3. show order information in 2 cloumns
-<!-- => Create Order Screen
-==>create backend api for order/:id
-==>fetch order api in frontend
-==>show order information in 2 cloumns -->
+    <!-- => Create Order Screen
+    ==>create backend api for order/:id
+    ==>fetch order api in frontend
+    ==>show order information in 2 cloumns -->
+    => Pay Order By Paypal
+    ==>generate paypal client id
+    ==>create api to return client id
+    ==>install react-paypal-js
+    ==>use PayPalScriptProvider in index.js
+    ==>use usePayPalScriptReducer in Order Screen
+    ==>implement loadPaypalScript functution
+    ==>render paypal button
+    ==>implement onApproove payment function
+    ==>create pay order api in backend
+    => Display Order History
+    =>=> create order screen
+    =>=>create order history api
+    =>=>use api in the frontend
