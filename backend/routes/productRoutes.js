@@ -26,4 +26,16 @@ productRouter.get("/:id", async (req, res) => {
   }
 });
 
+// productRouter.post("/", async (req, res) => {
+//   const product = await Product.create({
+//     brand: "adidas",
+//     countInStock: "200",
+//     description: "is good product",
+//     name: "clothes",
+//     category: "baju",
+//     createdAt: "",
+//     image: "",
+//   });
+//   res.send(product);
+// });
 export default productRouter;

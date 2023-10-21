@@ -125,6 +125,7 @@ add signin button
     ==>create backend api for order/:id
     ==>fetch order api in frontend
     ==>show order information in 2 cloumns -->
+
     => Pay Order By Paypal
     ==>generate paypal client id
     ==>create api to return client id
@@ -139,3 +140,9 @@ add signin button
     =>=> create order screen
     =>=>create order history api
     =>=>use api in the frontend
+
+    =>.create profile screen
+    ==> get user info from context
+    ==>show user information
+    ==>create user update api
+    ==>update user info
