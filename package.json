@@ -13,12 +13,10 @@
     "install:backend": "npm install --prefix backend",
     "install": "npm-run-all install:backend install:frontend"
 
-    "build:client": "cp .env client/.env; npm run build --prefix client",
-    "build:server": "npm run build --prefix server && cp -r server/node_modules server/build/node_modules && node uninstaller.js",
+    "build:frontend": "cp .env client/.env; npm run build --prefix client",
+    "build:backend": "npm run build --prefix server && cp -r server/node_modules server/build/node_modules && node uninstaller.js",
 
     
-    "install": "npm install --prefix frontend",
-    "build": "npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",
