@@ -5,8 +5,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:frontend": "cp .env frontend/.env; npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev": "npm-run-all -p -r dev:backend dev:frontend",
+    "install:frontend": "cp .env frontend/.env; npm install --prefix frontend --force",
+    "install:backend": "npm install --prefix--force backend",
+    "install": "npm-run-all install:backend install:frontend",
+    "build": "cp .env frontend/.env; npm run build --prefix frontend"
   },
   "author": "",
   "license": "ISC",
