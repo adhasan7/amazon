@@ -22,10 +22,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "BUILD_PATH=../backend/public react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+     "dev:frontend": "cp .env frontend/.env; npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev": "npm-run-all -p -r dev:backend dev:frontend",
+    "install:frontend": "cp .env frontend/.env; npm install --prefix frontend --force",
+    "install:backend": "npm install --prefix--force backend",
+    "install": "npm-run-all install:backend install:frontend",
+    "build": "cp .env frontend/.env; npm run build --prefix frontend"
   },
   "eslintConfig": {
     "extends": [
