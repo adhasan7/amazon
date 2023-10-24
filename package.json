@@ -14,7 +14,7 @@
     "install": "npm-run-all install:backend install:frontend",
 
     "build:frontend": "cp .env frontend/.env; npm run build --prefix frontend",
-    "build:backend": "npm run build --prefix backend"
+  
 
     
   },
