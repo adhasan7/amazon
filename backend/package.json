@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "npm-run-all build:backend build:frontend",
+    
     
     "dev:backend": "npm run dev --prefix backend",
     "dev": "npm-run-all -p -r dev:backend dev:frontend",
