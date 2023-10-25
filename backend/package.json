@@ -8,11 +8,7 @@
     "start": "node server.js",
     
     
-    "dev:backend": "npm run dev --prefix backend",
-    "dev": "npm-run-all -p -r dev:backend dev:frontend",
-    "install:frontend": "cp .env frontend/.env; npm install --prefix frontend --force",
-    "install:backend": "npm install --prefix--force backend",
-    "install": "npm-run-all install:backend install:frontend",
+  
   
   },
   "author": "",
