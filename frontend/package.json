@@ -23,8 +23,8 @@
   },
   "scripts": {
 "start": "react-scripts start",
-"build: "BUILD_PATH=../backend/public react-scripts build",
-"test: "react-scripts test"
+"build": "BUILD_PATH=../backend/public react-scripts build",
+"test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
