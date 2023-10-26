@@ -146,3 +146,12 @@ add signin button
     ==>show user information
     ==>create user update api
     ==>update user info
+
+    =>. Publish To Web pages
+    =>=> create and config node project
+    =>=> serve build folder in frontend folder
+    =>=> create Heroku account
+    =>=> connect it go github
+    =>=> create mongodb atlas database
+    =>=> set database connection in heroku env variables
+    =>=> commit and push
