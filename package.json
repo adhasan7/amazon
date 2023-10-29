@@ -8,6 +8,10 @@
     "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Hasan",
+  "license": "ISC",
+  "dependencies": {
+    "react": "18.2.0",
+    "use-reducer-logger": "1.0.2"
+  }
 }

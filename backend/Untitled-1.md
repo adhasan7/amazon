@@ -1,1 +1,1 @@
-mongodb://localhost:27017
+mongodb+srv://toko:123456@cluster0.ym0uyul.mongodb.net/amazona?retryWrites=true&w=majority

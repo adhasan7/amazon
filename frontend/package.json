@@ -22,9 +22,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-"start": "react-scripts start",
-"build": "BUILD_PATH=../backend/public react-scripts build",
-"test": "react-scripts test"
+    "start": "react-scripts start",
+    "build": "set BUILD_PATH=../backend/public && react-scripts build",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
