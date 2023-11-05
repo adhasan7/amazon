@@ -155,3 +155,10 @@ add signin button
     =>=> create mongodb atlas database
     =>=> set database connection in heroku env variables
     =>=> commit and push
+
+Add Sidebar and Search Box
+
+1. add sidebar
+2. add search box
+
+Create Search Screen 1. show filters 2. create api for searching products 3. display results

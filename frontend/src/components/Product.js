@@ -28,6 +28,8 @@ function Product(props) {
     });
   };
 
+  //http://localhost:3000/api/products/search?/&query=all&price=all&rating=all&order=newest&page=1
+
   return (
     <Card>
       <Link to={`/product/${product.slug}`}>

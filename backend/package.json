@@ -6,10 +6,6 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
-    
-    
-  
-  
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +21,12 @@
     "mongoose": "^7.5.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.2",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "concurrently": "^8.2.2",
     "nodemon": "^3.0.1"
   }
 }

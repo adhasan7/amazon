@@ -89,6 +89,7 @@ export default function ProfileScreen() {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
+            value={confirmPassword}
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
@@ -96,6 +97,7 @@ export default function ProfileScreen() {
           <Form.Label>Confirm Password</Form.Label>
           <Form.Control
             type='password'
+            value={loadingUpdate}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </Form.Group>
