@@ -167,3 +167,8 @@ Create Search Screen 1. show filters 2. create api for searching products 3. dis
 =>=> define protected route component
 =>=> define admin route component
 =>=> add menu for admin in header
+
+=> Create Dashboard Screen
+=>=> create dashboard
+=>=> implement backend api
+=>=> connect ui to backend
