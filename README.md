@@ -172,3 +172,8 @@ Create Search Screen 1. show filters 2. create api for searching products 3. dis
 =>=> create dashboard
 =>=> implement backend api
 =>=> connect ui to backend
+
+=>Manage Products
+1.create products list ui
+2.implement backend api
+3.fetch data
