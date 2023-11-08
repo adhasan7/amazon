@@ -184,3 +184,5 @@ Create Product 1. create products button 2. implement backend api 3. handle on c
 =>=> create edit button
 =>=> create edit product ui
 =>=> display product info in the input boxes
+
+Implement Update Product 1. create edit product backend api 2. handle update click
