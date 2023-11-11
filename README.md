@@ -194,3 +194,5 @@ Delete Product 1. show delete button 2. implement backend api 3. handle on click
 List Orders 1. create order list screen 2. implement backen api 3. fetch and display orders
 
 Deliver Order 1. add deliver button 2. handle click action 3. implement backen api for deliver
+
+Delete Order 1. add delete button 2. handle click action 3. implement backen api for delete
