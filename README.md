@@ -198,3 +198,5 @@ Deliver Order 1. add deliver button 2. handle click action 3. implement backen a
 Delete Order 1. add delete button 2. handle click action 3. implement backen api for delete
 
 List Users 1. create user list screen 2. implement backen api 3. fetch and display users
+
+Edit User 1. create edit button 2. create edit product ui 3. dispaly product info in the input boxes 4. implement backend api 5. handle edit click
