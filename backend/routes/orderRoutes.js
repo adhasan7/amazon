@@ -3,7 +3,9 @@ import expressAsyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
 import User from "../models/userModel.js";
 import Product from "../models/productModel.js";
-import { isAuth, isAdmin } from "../utils.js";
+
+import { isAuth, isAdmin, mailgun, payOrderEmailTemplate } from "../utils.js";
+
 const orderRouter = express.Router();
 
 orderRouter.get(
@@ -15,6 +17,7 @@ orderRouter.get(
     res.send(orders);
   })
 );
+
 orderRouter.post(
   "/",
   isAuth,
@@ -85,7 +88,6 @@ orderRouter.get(
     res.send(orders);
   })
 );
-
 orderRouter.get(
   "/:id",
   isAuth,
@@ -98,7 +100,6 @@ orderRouter.get(
     }
   })
 );
-
 orderRouter.put(
   "/:id/deliver",
   isAuth,
@@ -114,12 +115,14 @@ orderRouter.put(
     }
   })
 );
-
 orderRouter.put(
   "/:id/pay",
   isAuth,
   expressAsyncHandler(async (req, res) => {
-    const order = await Order.findById(req.params.id);
+    const order = await Order.findById(req.params.id).populate(
+      "user",
+      "email name"
+    );
     if (order) {
       order.isPaid = true;
       order.paidAt = Date.now();
@@ -129,14 +132,32 @@ orderRouter.put(
         update_time: req.body.update_time,
         email_address: req.body.email_address,
       };
+
       const updatedOrder = await order.save();
+      mailgun()
+        .messages()
+        .send(
+          {
+            from: "Amazona <amazona@mg.yourdomain.com>",
+            to: `${order.user.name} <${order.user.email}>`,
+            subject: `New order ${order._id}`,
+            html: payOrderEmailTemplate(order),
+          },
+          (error, body) => {
+            if (error) {
+              console.log(error);
+            } else {
+              console.log(body);
+            }
+          }
+        );
+
       res.send({ message: "Order Paid", order: updatedOrder });
     } else {
       res.status(404).send({ message: "Order Not Found" });
     }
   })
 );
-
 orderRouter.delete(
   "/:id",
   isAuth,
@@ -144,13 +165,11 @@ orderRouter.delete(
   expressAsyncHandler(async (req, res) => {
     const order = await Order.findById(req.params.id);
     if (order) {
-      await order.deleteOne();
-
+      await order.remove();
       res.send({ message: "Order Deleted" });
     } else {
       res.status(404).send({ message: "Order Not Found" });
     }
   })
 );
-
 export default orderRouter;

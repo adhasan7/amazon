@@ -203,3 +203,5 @@ Edit User 1. create edit button 2. create edit product ui 3. dispaly product inf
 
 Delete User 1. add delete button 2. handle click action 3. implement backen api for delete
 Choose Address On Google Map 1. create google map credentials 2. update .env file with Google Api Key 3. create api to send google api to frontend 4. create map screen 5. fetch google api 6. getUserLocation 7. install @react-google-maps/api 8. use it in shipping screen 9. apply map to the checkout screen
+
+Email order receipt by mailgun 1. create mailgun account 2. add and verify your domain to mailgun 3. install mailgun-js 4. set api key in env file 5. change pay order in orderRouter 6. send email order receipt
