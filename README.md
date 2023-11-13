@@ -207,3 +207,5 @@ Choose Address On Google Map 1. create google map credentials 2. update .env fil
 Email order receipt by mailgun 1. create mailgun account 2. add and verify your domain to mailgun 3. install mailgun-js 4. set api key in env file 5. change pay order in orderRouter 6. send email order receipt
 
 Review Orders 1. create submit review form 2. handle submit 3. implement backend api for review
+
+Upload multiple Images 1. add images to product model 2. get images in edit screen 3. show images in product screen
