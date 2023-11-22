@@ -211,3 +211,6 @@ Review Orders 1. create submit review form 2. handle submit 3. implement backend
 Upload multiple Images 1. add images to product model 2. get images in edit screen 3. show images in product screen
 
 Upgrade To React 18 1. install node-check-updates 2. ncu -u 3. remove package-lock.json 4. npm install 5. replace render with createRoot 6. fix LinkContainer error
+//
+//
+Implement Live Chat With Customers 1. use socket io to create backend 2. create chat box component 3. create support screen

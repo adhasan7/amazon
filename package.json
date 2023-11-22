@@ -16,6 +16,7 @@
     "mongose": "^0.0.2-security",
     "react": "^18.0.0",
     "react-router-dom": "^6.17.0",
+    "socket.io": "^4.7.2",
     "use-reducer-logger": "1.0.2"
   },
   "keywords": []

@@ -34,6 +34,8 @@ import OrderListScreen from "./screens/OrderListScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import MapScreen from "./screens/MapScreen";
+import SupportScreen from "./screens/SupportScreen";
+import ChatBox from "./components/ChatBox";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -178,6 +180,9 @@ function App() {
               <Route path='/search' element={<SearchScreen />} />
               <Route path='/signin' element={<SigninScreen />} />
               <Route path='/signup' element={<SignupScreen />} />
+
+              <Route path='/support' element={<SigninScreen />} />
+
               <Route
                 path='/profile'
                 element={
@@ -267,12 +272,25 @@ function App() {
                 }
               ></Route>
 
+              <Route
+                path='/admin/support/:id'
+                element={
+                  <AdminRoute>
+                    <UserEditScreen />
+                  </AdminRoute>
+                }
+              ></Route>
+
               <Route path='/' element={<HomeScreen />} />
             </Routes>
           </Container>
         </main>
         <footer>
-          <div className='text-center'>All rights reserved</div>
+          {/* <div className='text-center'>All rights reserved</div> */}
+          <footer className='row center'>
+            {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />}
+            <div>All right reserved</div>{" "}
+          </footer>
         </footer>
       </div>
     </BrowserRouter>
